@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<SplitPane maxHeight="800" maxWidth="1280" minHeight="600" minWidth="720" orientation="VERTICAL" prefHeight="700.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sceptra.Controller">
+    <items>
+        <GridPane fx:id="grid" prefHeight="193.0" prefWidth="759.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="250.0" minHeight="250.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="250.0" minHeight="250.0" prefHeight="250.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextArea fx:id="userText" prefHeight="250.0" prefWidth="329.0" GridPane.rowIndex="1" />
+                <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                    <children>
+                        <CheckBox fx:id="history" layoutX="20.0" layoutY="16.0" mnemonicParsing="false" text="By History" />
+                        <CheckBox fx:id="filter" layoutX="380.0" layoutY="16.0" mnemonicParsing="false" text="with top filter" />
+                        <TextField fx:id="topval" layoutX="689.0" layoutY="12.0" prefHeight="26.0" prefWidth="73.0" />
+                        <ComboBox fx:id="category" layoutX="222.0" layoutY="12.0" prefWidth="150.0">
+                        </ComboBox>
+                        <Button fx:id="findBut" layoutX="850.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#doSomething" text="Find" />
+                        <Label layoutX="141.0" layoutY="18.0" text="Category" />
+                        <Label layoutX="580.0" layoutY="18.0" prefHeight="16.0" prefWidth="91.0" text="percentage" />
+                    </children>
+                </Pane>
+                <ListView fx:id="listView" prefHeight="153.0" prefWidth="759.0" GridPane.rowIndex="3" />
+            <Label prefHeight="38.0" prefWidth="311.0" text="Sceptra Requirement Technology User Mapper" textAlignment="CENTER" textFill="#e40505" />
+                <!--<TableView fx:id="dataTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">-->
+                <!--</TableView>-->
+
+            </children>
+        </GridPane>
+    </items>
+</SplitPane>
